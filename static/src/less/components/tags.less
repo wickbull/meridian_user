@@ -1,0 +1,30 @@
+.c-tags {
+    .font-condensed;
+    font-size: @font-size-small;
+    margin-bottom: -@gutter-xs;
+
+    .item {
+        display: inline-block;
+        margin-bottom: @gutter-xs;
+        max-width: 100%;
+        
+        &:not(:last-child) {
+            margin-right: @gutter-xs;
+        }
+    }
+    
+    .link {
+        display: inline-block;
+        color: @text-color;
+        padding: 5px;
+        border: 1px solid @gray-lighter;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+
+        &:hover {
+            background-color: @gray-lighter;
+        }
+    }
+}

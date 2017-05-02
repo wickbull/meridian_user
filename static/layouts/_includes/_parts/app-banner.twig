@@ -1,0 +1,30 @@
+<div class="c-banner__top">
+    <div class="container">
+        <div class="inner">
+            <a href="#" class="c-hamburger js-hamburger" aria-label="Меню"><span aria-hidden="true"></span></a>
+            <a href="00-home.html" class="logo">СНУ ІСФМ</a>
+            {% include 'banner-search.twig' %}
+        </div>
+    </div>
+</div>
+<div class="c-banner__main">
+    <div class="container">
+        <div class="inner">
+            <nav>
+                <ul class="list navigation js-nav">
+                    {% for item in menuTop %}
+                        <li class="item"><a href="{{ item.id }}.html" class="link{% if item.extend %} is-opening{% endif %}">{{ item.title }}</a>
+                            {% if item.extend %}
+                                <ul class="list">
+                                    {% for subItem in item.extend %}
+                                        <li class="item"><a href="{{ subItem.id }}.html" class="link">{{ subItem.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+{% extends '_templates/base.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row js-parent">
+            <div class="col-md-8">
+                <article class="o-news">
+                    <h1 class="c-title">Біологічний факультет допомагає Святому Миколаю творити добро</h1>
+                    <div class="o-news__info">
+                        <span class="category">наукова діяльність</span>
+                        <time class="date" datetime="2016-01-12">12.01.2016</time>
+                    </div>
+                    <div class="o-news__img">
+                        <div class="unbox">
+                            <div class="js-img c-img c-img--lg">
+                                <img src="https://unsplash.it/750/450?image=17" width="750" height="450">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-content o-news__content">
+                        <p class="lead">З дітьми були проведені різні розважальні й пізнавальні заходи. За активну участь та перемогу в конкурсах діти отримували подарунки, прижбані студентами та викладачами факультету. Цікавим було спілкування зі Святим Миколаєм.</p>
+                        <p>Гарною традицією <a href="#">біологічного факультету</a> стало відвідування студентами дітей із вадами зору Крупівського навчально-реабілітаційного центру. Ось і цього року 20 грудня Святий Миколай та білосніжні ангели біофаку влаштували справжнє свято.</p>
+                        <img src="http://eenu.edu.ua/sites/default/files/u28/mjromlchccc.jpg" alt="">
+                        <p>З дітьми були проведені різні розважальні й пізнавальні заходи. За активну участь та перемогу в конкурсах діти отримували подарунки, прижбані студентами та викладачами факультету. Цікавим було спілкування зі Святим Миколаєм. Діти співали пісні, розказували вірші та ставили каверзні запитання. Теплі слова, емоції, гарний настрій, любов, посмішки дітей – це найпрекрасніше в нашому житті. На завершення свята дітлахи написали свої побажання на наступний рік зі зворушливими проханнями миру в Україні, здоров’я своїм рідним та зустрічі в наступному році.</p>
+                        <img src="http://eenu.edu.ua/sites/default/files/u28/obcqqzmkfyw.jpg" alt="">
+                        <p>Дякуємо всім добрим серцям, хто долучився до цієї поїздки!</p>
+                        <img src="http://eenu.edu.ua/sites/default/files/u28/obcqqzmkfyw.jpg" alt="">
+                        <img src="http://eenu.edu.ua/sites/default/files/u28/4t8elhv9xs0.jpg" alt="">
+                        <p>Дякуємо всім добрим серцям, хто долучився до цієї поїздки!</p>
+                    </div>
+                    <ul class="c-carousel js-carousel">
+                        <li class="c-slide">
+                            <a href="http://eenu.edu.ua/sites/default/files/u28/mjromlchccc.jpg" class="swipebox" title="1"><img src="http://eenu.edu.ua/sites/default/files/u28/mjromlchccc.jpg" alt=""></a>
+                        </li>
+                        <li class="c-slide">
+                            <a href="http://eenu.edu.ua/sites/default/files/u28/obcqqzmkfyw.jpg" class="swipebox" title="2"><img src="http://eenu.edu.ua/sites/default/files/u28/obcqqzmkfyw.jpg" alt=""></a>
+                        </li>
+                        <li class="c-slide">
+                            <a href="http://eenu.edu.ua/sites/default/files/u28/4t8elhv9xs0.jpg" class="swipebox" title="3"><img src="http://eenu.edu.ua/sites/default/files/u28/4t8elhv9xs0.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                    {% include '_parts/social.twig' with {'share': true, 'class': 'u-mt'} %}
+                </article>
+            </div>
+            <div class="col-md-4 js-sticky c-sticky">
+                <aside class="o-sidebar">
+                    {% include '_parts/tags.twig' %}
+                    <section class="o-block">
+                        <h2 class="title"><a href="01-list.html">Останні новини</a></h2>
+                        {% include '_parts/block-news-item.twig' with {'itemTitle': 'Тоні Палмер презентував англійську мову – як мову поетів та кохання', 'itemVideo': true, 'itemPhoto': true, 'itemImg': '15', 'itemClass': 'c-news-item--default'} %}
+                        {% include '_parts/block-news-item.twig' with {'itemTitle': 'В університеті стартує набір на сертифікатні курси', 'itemClass': 'c-news-item--default'} %}
+                        {% include '_parts/block-news-item.twig' with {'itemTitle': 'Програма фестивалю «Різдвяний вертеп»', 'itemPhoto': true, 'itemClass': 'c-news-item--default'} %}
+                        {% include '_parts/block-news-item.twig' with {'itemTitle': 'Світла пам’ять колезі', 'itemClass': 'c-news-item--default'} %}
+                        {% include '_parts/block-news-item.twig' with {'itemTitle': 'Володарі премії «Кришталева доріжка» – спортсмени та викладачі університету', 'itemPhoto': true, 'itemClass': 'c-news-item--default'} %}
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+{% endblock %}

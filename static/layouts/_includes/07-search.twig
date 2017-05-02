@@ -1,0 +1,30 @@
+{% extends '_templates/base.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="c-title">Пошук</h1>
+        <div class="c-result">
+            <span class="total">Знайдено 12 результатів</span>
+            <ul class="list">
+                <li class="item">
+                    <a href="#" class="link is-active">Всі категорії</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Новини</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="link">Події</a>
+                </li>
+            </ul>
+        </div>
+        <section class="o-list o-list--block">
+            {% include '_parts/block-news-item.twig' with {'itemTitle': 'Молодь на ринку праці', 'itemPhoto': true, 'itemImg': '17', 'itemHeight': '450', 'itemCategory': 'наукова діяльність', 'itemClass': 'o-list__item c-news-item--media'} %}
+            {% include '_parts/block-news-item.twig' with {'itemTitle': 'Біологічний факультет допомагає Святому Миколаю творити добро', 'itemPhoto': true, 'itemImg': '37', 'itemHeight': '450', 'itemCategory': 'студентське самоврядування', 'itemClass': 'o-list__item c-news-item--media'} %}
+            <div class="o-list__item">
+                {% include '_parts/teacher.twig' %}
+            </div>
+            {% include '_parts/block-news-item.twig' with {'itemTitle': 'Студенти-хіміки привітали дітей Рожищенського навчально-реабілітаційного центру зі святом', 'itemVideo': true, 'itemImg': '165', 'itemHeight': '450', 'blockVideo': true, 'itemCategory': 'студентське самоврядування', 'itemClass': 'o-list__item c-news-item--media'} %}
+            {% include '_parts/block-news-item.twig' with {'itemTitle': 'Гра про гру', 'itemVideo': true, 'itemImg': '56', 'itemHeight': '450', 'blockVideo': true, 'itemCategory': 'студентське самоврядування', 'itemClass': 'o-list__item c-news-item--media'} %}
+        </section>
+    </div>
+{% endblock %}

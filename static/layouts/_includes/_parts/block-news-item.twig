@@ -1,0 +1,35 @@
+<article class="c-news-item{% if itemClass %} {{ itemClass }}{% endif %}">
+    <a href="02-news.html" class="link">
+        {% if itemImg %}
+            <div class="{% if blockVideo %}img-wrap {% endif %}js-img c-img {% if itemHeight %}c-img--lg{% else %}c-img--sm{% endif %}">
+                <img src="https://unsplash.it/{% if itemHeight %}750/450{% else %}200/200{% endif %}?image={{ itemImg }}" alt="" width="{% if itemHeight %}750{% else %}200{% endif %}" height="{% if itemHeight %}450{% else %}200{% endif %}">
+            </div>
+        {% endif %}
+        <div class="inner">
+            <h3 class="c-news-title">{{ itemTitle }}</h3>
+            {% if itemHeight %}
+                {% if itemPhoto %}
+                    <div class="o-type">
+                        <span class="item"><i class="icon i-photo" aria-hidden="true"></i></span>
+                    </div>
+                {% endif %}
+                {% if itemVideo %}
+                    <div class="o-type">
+                        <span class="item"><i class="icon i-video" aria-hidden="true"></i></span>
+                    </div>
+                {% endif %}
+            {% else %}
+                {% if itemPhoto %}
+                    <i class="icon i-photo" aria-hidden="true"></i>
+                {% endif %}
+                {% if itemVideo %}
+                    <i class="icon i-video" aria-hidden="true"></i>
+                {% endif %}
+            {% endif %}
+            {% if itemCategory %}
+                <span class="category">{{ itemCategory }}</span>
+            {% endif %}
+            <time class="date" pubdate datetime="2016-01-12">12.01.2016</time>
+        </div>
+    </a>
+</article>

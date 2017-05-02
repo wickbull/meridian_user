@@ -1,0 +1,16 @@
+<script src="{{ static_asset('/src/js/vendor/jquery-1.12.0.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/lodash.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/bootstrap/bootstrap.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/slick.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/jquery.swipebox.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/headroom.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/jquery.headroom.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/imagesloaded.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/social.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/sticky.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/jquery.mark.min.js') }}"></script>
+<script src="{{ static_asset('/src/js/vendor/iscroll-probe.js') }}"></script>
+<script src="{{ static_asset('/src/js/app.js') }}"></script>
+<script src="{{ static_asset('/src/js/carousel.js') }}"></script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script src="{{ static_asset('/src/js/onesignal/notifications.js') }}"></script>

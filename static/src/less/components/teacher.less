@@ -1,0 +1,26 @@
+.c-teacher {
+    .clearfix;
+    margin-bottom: @gutter-sm;
+
+    .photo {
+        margin-bottom: @gutter-sm;
+        text-align: center;
+    }
+}
+
+@media (min-width: @mobile) {
+
+    .c-teacher {
+        .photo, .info {
+            float: left;
+            width: 50%;
+        }
+
+        .photo {
+            padding-right: @gutter;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+}

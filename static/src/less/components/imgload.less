@@ -1,0 +1,23 @@
+.c-img {
+    background-color: @gray-lighter;
+
+    img {
+        display: none;
+    }
+
+    &.is-loaded {
+        padding-bottom: 0;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.c-img--lg {
+    padding-bottom: 60%;
+}
+
+.c-img--sm {
+    padding-bottom: @img-sm;
+}

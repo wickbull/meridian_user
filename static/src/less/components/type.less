@@ -1,0 +1,88 @@
+//# Typography
+//
+//*
+
+.font-condensed() {
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
+}
+
+a.link-hover, .link-hover a {
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+        border-bottom-color: currentColor;
+    }
+}
+
+a.link-dark, .link-dark a {
+    color: @text-color;
+
+    &:hover {
+        color: @link-color;
+    }
+}
+
+//## Headings
+//
+//*
+
+// h1, .h1,
+// h2, .h2,
+// h3, .h3 {
+//     margin-top: @spacer-lg;
+//     margin-bottom: @spacer;
+// }
+
+
+//## Text
+//
+//*
+
+// p {
+//     margin-bottom: @spacer;
+// }
+
+
+//## Lists
+//
+//*
+
+//### Unordered and Ordered lists
+
+// ul,
+// ol {
+//     margin-bottom: @spacer;
+// }
+
+//### Determination list
+
+dl {
+    margin-bottom: 0;
+}
+
+dd:not(:last-child) {
+    margin-bottom: @gutter-xs;
+}
+
+
+//## Forms
+//
+//*
+
+textarea {
+    resize: vertical;
+}
+
+
+//## Misc
+//
+//*
+
+abbr[title] {
+    border-bottom: 0;
+
+    a & {
+        cursor: inherit;
+    }
+}

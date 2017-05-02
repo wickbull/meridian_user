@@ -1,0 +1,172 @@
+//# Slick
+//
+//* Customize styles of slick carousel: http://kenwheeler.github.io/slick/
+
+
+//## Carousel box
+//
+//*
+
+.c-carousel-box {
+    overflow: hidden;
+
+    .slick-list {
+        overflow: visible;
+    }
+}
+
+
+//## Carousel wrapper generated
+//
+//*
+
+.c-carousel {
+    &:extend(.list-unstyled);
+
+    position: relative;
+    margin: @gutter-sm 0;
+
+    &:not(.slick-initialized) {
+        .c-carousel__item ~ .c-carousel__item,
+        .c-btn-prev,
+        .c-btn-next {
+            display: none;
+        }
+    }
+}
+
+
+//## Carousel slide
+//
+//*
+
+.c-carousel__item {
+    outline: none !important;
+}
+
+
+//## Arrows
+//
+//* Next/prev slide button
+
+.c-btn-prev,
+.c-btn-next {
+    width: @btn-arrow-width;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: fade(@gray-base, 10);
+    border: 0;
+    text-align: center;
+
+    &:hover {
+        background-color: fade(@brand-primary, 30);
+    }
+
+    > .icon {
+        vertical-align: middle;
+    }
+
+    .c-carousel:not(.slick-initialized) & {
+        display: none;
+    }
+}
+
+.c-btn-prev {
+    left: 0;
+
+    > .icon {
+        transform: rotate(180deg);
+    }
+}
+
+.c-btn-next {
+    right: 0;
+}
+
+.c-btn-prev,
+.c-btn-next {
+    & when (@arrows-fullscreen = false) {
+        & when (@nav-dots = false) {
+            margin-top: -(ceil(@btn-arrow-height / 2));
+        }
+
+        & when (@nav-dots = true) {
+            margin-top: -(ceil((@btn-arrow-height / 2) + (@nav-dots-wrap-height / 2)));
+        }
+    }
+}
+
+//* Disabled slick button (next/prev) class
+.slick-disabled { // TODO: work around
+    display: none !important;
+}
+
+
+//## Dots
+//
+//* Pagination
+
+.slick-dots {
+    &:extend(.list-unstyled);
+
+    height: @nav-dots-wrap-height;
+    text-align: center;
+    line-height: @nav-dots-wrap-height;
+
+    > li {
+        display: inline-block;
+        height: @nav-dot-size;
+        vertical-align: middle;
+
+        + li {
+            margin-left: 10px;
+        }
+
+        > button {
+            .square(@nav-dot-size);
+
+            color: transparent;
+            text-shadow: none;
+            padding: 0;
+            background-color: @nav-dot-bg;
+            border-radius: @nav-dot-radius;
+        }
+
+        &.slick-active > button {
+            background-color: @nav-dot-active-bg;
+        }
+
+        & when (@nav-dot-active-contour = outside) {
+            > button {
+                border: 0;
+
+                &:hover,
+                &:active {
+                    box-shadow: 0 0 0 2px @nav-dot-bg;
+                }
+            }
+
+            &.slick-active > button {
+                box-shadow: 0 0 0 2px @nav-dot-bg;
+            }
+        }
+
+        & when (@nav-dot-active-contour = inside) {
+            > button {
+                border: 1px solid @body-bg;
+
+                &:hover,
+                &:active {
+                    border-color: @nav-dot-bg;
+                }
+            }
+
+            &.slick-active > button {
+                border-color: @nav-dot-active-bg;
+            }
+        }
+    }
+}

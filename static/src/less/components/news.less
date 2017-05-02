@@ -1,0 +1,31 @@
+.o-news__info {
+    margin-bottom: @gutter-sm;
+    .font-condensed;
+    color: @gray-light;
+
+    .category {
+        margin-right: @gutter-sm;
+    }
+}
+
+.o-news__img {
+    margin-bottom: @gutter-sm;
+    padding-bottom:@gutter-sm;
+    border-bottom: 1px solid @gray-lighter;
+
+    .unbox {
+        margin: 0 -@gutter-sm;
+    }
+}
+
+.c-sticky {
+	position: static;
+}
+
+@media (min-width: @screen-sm-min) {
+    .o-news__img {
+        .unbox {
+            margin: 0;
+        }
+    }
+}

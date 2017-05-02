@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="inner">
+        <ul class="list">
+            <li class="item">
+                <a href="#" class="link">Про факультет</a>
+            </li>
+            <li class="item">
+                <a href="#" class="link">Контакти</a>
+            </li>
+            <li class="item">
+                <a href="#" class="link">Абітурієнту</a>
+            </li>
+            <li class="item">
+                <a href="#" class="link">Студентам</a>
+            </li>
+        </ul>
+        {% include 'social.twig' with {'class': 'u-mt-xs u-mb-xs'} %}
+        <div class="copyright">
+            <span class="c-copy">© {{ 'now'|date('Y') }} Факультет інформаційних систем фізики та математики</span>
+            <span class="created">зроблено в <a href="https://www.ideil.com/" target="_blank" class="link">ідейл</a></span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+{% extends '_templates/base.twig' %}
+{% set static_header = true %}
+{% set count = 5 %}
+{% set column = 4 %}
+
+{% block content %}
+    <article class="container">
+        <h1 class="c-title">Розклад сесії</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores iusto sint quasi alias, magni quidem perspiciatis nemo nisi doloremque quis cum, aperiam et eum tempore, sit delectus rerum vero. Sed.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores iusto sint quasi alias, magni quidem perspiciatis nemo nisi doloremque quis cum, aperiam et eum tempore, sit delectus rerum vero. Sed.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores iusto sint quasi alias, magni quidem perspiciatis nemo nisi doloremque quis cum, aperiam et eum tempore, sit delectus rerum vero. Sed.</p>
+        <div class="c-filter">
+            <div class="highlight">
+                <div class="form-group">
+                    <input type="text" class="form-control js-keyword" placeholder="Ключове слово">
+                    <button class="clear js-unmark">&times;</button>
+                </div>
+                <button class="btn btn-primary js-mark" type="submit">Знайти</button>
+            </div>
+            <div class="dropdown">
+              <button id="dLabel" class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Група <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dLabel">
+                  <li><a href="#">Група 1</a></li>
+                  <li><a href="#">Група 2</a></li>
+                  <li><a href="#">Група 3</a></li>
+                  <li><a href="#">Група 4</a></li>
+                  <li><a href="#">Група 5</a></li>
+              </ul>
+            </div>
+        </div>
+    </article>
+    <div class="container-fluid">
+        <div class="text-center">
+            <div class="c-schedule c-schedule--session js-session">
+                <div class="c-schedule__head js-scroll" id="tableHead">
+                    <div class="c-schedule__table">
+                        <div class="thead">
+                            <div class="tr">
+                                <div class="td td-1">№</div>
+                                <div class="td td-2">Спеціальність</div>
+                                <div class="td td-3">Курс</div>
+                                <div class="td td-4">Група</div>
+                                <div class="td td-5">Предмет</div>
+                                <div class="td td-6">Форма контролю</div>
+                                <div class="td td-7">Викладач</div>
+                                <div class="td td-8">Дата</div>
+                                <div class="td td-9">Час</div>
+                                <div class="td td-10">Ауд.</div>
+                                <div>
+                                    <div class="tr">
+                                        <div class="td is-grow">Ліквідація заборгованості</div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="td td-11">Викладачеві</div>
+                                        <div class="td is-grow">Комісії</div>
+                                    </div>
+                                    <div class="tr">
+                                        <div class="td td-11">дата, час, ауд.</div>
+                                        <div class="td td-12">дата, час, ауд.</div>
+                                        <div class="td td-13">склад комісії</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="c-schedule__body js-scroll" id="tableBody">
+                    <div class="c-schedule__table">
+                        <div class="tbody">
+                            {% for i in 1..30 %}
+                                <div class="tr">
+                                    <div class="td td-1">{{ i }}</div>
+                                    <div class="td td-2">Математика</div>
+                                    <div class="td td-3">2</div>
+                                    <div class="td td-4">СНУ</div>
+                                    <div class="td td-5">Довга назва предмету дуже</div>
+                                    <div class="td td-6">залік</div>
+                                    <div class="td td-7">Прізвище І.П.</div>
+                                    <div class="td td-8">01.01.2016</div>
+                                    <div class="td td-9">13:00</div>
+                                    <div class="td td-10">777</div>
+                                    <div class="td td-11">01.01.2016 13:00 777</div>
+                                    <div class="td td-12">01.01.2016 13:00 777</div>
+                                    <div class="td td-13">склад комісії</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

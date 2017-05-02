@@ -1,0 +1,23 @@
+{
+    "name": "starlight/front-kernel",
+    "description": "",
+    "authors": [
+        {
+            "name": "Sergiy Litvinchuk",
+            "email": "sergiy.litvinchuk@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Starlight\\FrontKernel": "src/"
+        },
+        "files": [
+            "src/Starlight/FrontKernel/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable"
+}

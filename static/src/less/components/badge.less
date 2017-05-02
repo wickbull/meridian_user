@@ -1,0 +1,22 @@
+.o-type {
+    position: absolute;
+    top: @gutter-xs;
+    left: 0;
+    z-index: 1;
+    .clearfix;
+
+    .item {
+        display: block;
+        padding: 7px;
+        background-color: @brand-primary;
+        float: left;
+
+        &:not(:last-child) {
+            margin-right: 3px;
+        }
+    }
+
+    .icon {
+        display: block;
+    }
+}
